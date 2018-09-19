@@ -1,5 +1,5 @@
 # Unity-Cookbook-5.x Exercises
-Exercises contains: 
+<b>Exercises contains: </b> </br>
 UI</br>
 Inventory GUIs </br>
 2D Animation</br>
