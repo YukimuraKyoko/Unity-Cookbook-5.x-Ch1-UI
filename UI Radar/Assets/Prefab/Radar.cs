@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class Radar : MonoBehaviour {
 
+    public float insideRadarDistance = 20;
+    public float blipSizePercentage = 5;
+
+    public GameObject cube;
+    public GameObject sphere;
+
 	// Use this for initialization
 	void Start () {
 		
