@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Explaination in Page 45-48
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 public class Radar : MonoBehaviour
@@ -32,24 +34,21 @@ public class Radar : MonoBehaviour
         FindAndDisplayBlipsForTag("Sphere", rawImageBlipSphere);
     }
 
-    private void FindAndDisplayBlipsForTag(string tag,
-GameObject prefabBlip)
+    private void FindAndDisplayBlipsForTag(string tag, GameObject prefabBlip)
     {
         Vector3 playerPos = playerTransform.position;
-       
- GameObject[] targets =
-GameObject.FindGameObjectsWithTag(tag);
+        GameObject[] targets = GameObject.FindGameObjectsWithTag(tag);
+
         foreach (GameObject target in targets)
         {
             Vector3 targetPos = target.transform.position;
-            float distanceToTarget = Vector3.Distance(targetPos,
-           playerPos);
+            float distanceToTarget = Vector3.Distance(targetPos,playerPos);
             if ((distanceToTarget <= insideRadarDistance))
             {
                 Vector3 normalisedTargetPosiiton =
-               NormalisedPosition(playerPos, targetPos);
+                NormalisedPosition(playerPos, targetPos);
                 Vector2 blipPosition =
-               CalculateBlipPosition(normalisedTargetPosiiton);
+                CalculateBlipPosition(normalisedTargetPosiiton);
                 DrawBlip(blipPosition, prefabBlip);
             }
         }
@@ -110,6 +109,7 @@ GameObject.FindGameObjectsWithTag(tag);
        pos.x, blipWidth);
         rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top,
        pos.y, blipHeight);
-    }
+    }
+
 
 }
