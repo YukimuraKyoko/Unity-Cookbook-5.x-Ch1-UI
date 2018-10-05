@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Graphical UI Slider.unity
-  isLoaded: 1
-  isActive: 1
